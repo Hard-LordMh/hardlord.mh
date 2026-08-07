@@ -180,3 +180,17 @@ function showResult() {
         }
     }
 }
+
+document.getElementById('restart-btn').addEventListener('click', () => {
+    // Reset variables
+    currentQuestionIndex = 0;
+    userName = "";
+    nameInput.value = "";
+    startBtn.classList.remove('active');
+    startBtn.disabled = true;
+    
+    // Reset UI
+    document.body.style.backgroundImage = 'none';
+    resultContainer.classList.add('hidden');
+    nameContainer.classList.remove('hidden');
+});
