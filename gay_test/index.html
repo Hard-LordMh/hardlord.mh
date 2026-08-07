@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gay Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <div class="rainbow-banner"></div>
+        <div class="header">
+            <h1>ARE YOU GAY?</h1>
+        </div>
+        
+        <div id="name-container" class="content-container">
+            <h2 id="name-prompt" style="margin-bottom: 20px;">What is your name?</h2>
+            <input type="text" id="user-name" placeholder="Enter your name..." autocomplete="off" />
+            <button id="start-btn" class="action-btn" disabled>START TEST</button>
+        </div>
+        
+        <div id="quiz-container" class="content-container hidden">
+            <h2 id="question-text"></h2>
+            <div id="options-container"></div>
+            <button id="next-btn" class="action-btn" disabled>NEXT</button>
+        </div>
+
+        <div id="result-container" class="content-container hidden">
+            <h1 class="result-title" id="result-title">WHY ARE YOU GAY?</h1>
+            <img src="gay-meme.png" alt="Result meme" class="meme-image" id="meme-image">
+            <!-- Audio will play when result is shown -->
+            <audio id="horn-sound" src="https://www.myinstants.com/media/sounds/mlg-airhorn.mp3"></audio>
+            <button id="restart-btn" class="action-btn active" onclick="location.reload()">Take Test Again</button>
+        </div>
+    </div>
+    
+    <!-- Age Check Popup -->
+    <div id="age-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Are you 18+?</h2>
+            <p style="margin-bottom: 20px; color: #555;">This test contains mature humor.</p>
+            <div class="modal-buttons">
+                <button id="btn-yes" class="modal-btn yes-btn">YES</button>
+                <button id="btn-no" class="modal-btn no-btn">NO</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
